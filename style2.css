@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Fredoka+One&family=Quicksand:wght@700&display=swap');
+
+/* Base and Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 22px;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #181f2b 0%, #262a34 80%, #202939 100%);
+  color: #f2f2fb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header (Light) */
+.site-header {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #fffacf 70%, #d4fbff 100%);
+  color: #22223b;
+  padding: 18px 0;
+  border-bottom: 3px solid #f8cd60;
+  z-index: 20;
+}
+
+.nav-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 28px;
+}
+
+.site-name {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #22223b;
+}
+
+/* Navigation (Light Buttons) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #181f2b;
+  text-decoration: none;
+  font-size: 1.08rem;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: #eaf6ff;
+  font-family: 'Quicksand', 'Inter', sans-serif;
+  font-weight: 700;
+  transition: background 0.19s, color 0.17s;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+  background: linear-gradient(90deg, #ffd6e0 60%, #fffacf 100%);
+  color: #22223b;
+}
+
+/* Welcome Section, Shared for Other Tabs */
+.welcome-wrapper {
+  text-align: center;
+  padding-top: 110px;
+}
+
+.welcome-text svg {
+  width: 80vw;
+  margin-top: 45px;
+  max-width: 950px;
+  min-width: 210px;
+  height: auto;
+  overflow: visible;
+}
+
+text {
+  font-size: 170px;
+  font-family: 'Fredoka One', cursive;
+  fill: #fae268;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  filter: drop-shadow(0 10px 24px #202939);
+  /* unchanged if not SVG text */
+}
+
+.subtext {
+  font-size: 2rem;
+  color: #e1e2e9;
+  margin: 8px 0 0 0;
+  font-family: 'Quicksand', 'Inter', sans-serif;
+}
+
+.text {
+  margin: 2px 0 18px 0;
+  font-size: 2.2rem;
+  color: #67e6c2;
+  font-family: 'Quicksand', 'Inter', sans-serif;
+  font-weight: 700;
+}
+
+/* Get Started and General Action Buttons */
+.get-started,
+.block-btn,
+.floor-button,
+#back-button {
+  font-family: 'Quicksand', 'Inter', sans-serif;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 16px #f1f4fc;
+  color: #181f2b;
+  background: linear-gradient(90deg, #fffacf 60%, #d4fbff 100%);
+  padding: 14px 32px;
+  font-size: 1.2rem;
+  margin: 8px 12px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.17s, color 0.18s, transform 0.12s;
+}
+
+.get-started:hover,
+.block-btn:hover,
+.floor-button:hover,
+#back-button:hover {
+  background: linear-gradient(90deg, #ffd6e0 0%, #fffacf 100%);
+  color: #3e3e71;
+  transform: scale(1.05);
+}
+
+/* Block Buttons container */
+.block-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+/* Info/Card Layout (if used) */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 50px 24px;
+  margin-top: 30px;
+  box-sizing: border-box;
+  margin-top: 120px;
+}
+
+.info-card {
+  min-width: 210px;
+  max-width: 240px;
+  height: 300px;
+  padding: 0;
+  perspective: 1200px;
+  position: relative;
+  font-family: 'Quicksand', 'Inter', sans-serif;
+  font-weight: 700;
+  background: #22223b;
+}
+.labs-section {
+  background: rgba(255, 250, 207, 0.86);
+  border-radius: 19px;
+  box-shadow: 0 6px 38px #22223b33;
+  max-width: 780px;
+  margin: 48px auto 0 auto;
+  padding: 32px 30px 30px 36px;
+  text-align: left;
+  color: #181f2b;
+  font-family: 'Inter', 'Quicksand', 'Segoe UI', sans-serif;
+}
+
+.labs-section h3 {
+  font-family: 'Fredoka One', 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  color: #3e3e71;
+  margin-bottom: 22px;
+}
+
+.labs-section ol {
+  margin-left: 18px;
+}
+
+.labs-section li {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.labs-section h4 {
+  font-family: 'Quicksand', 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.13rem;
+  margin: 2px 0 4px 0;
+  color: #253746;
+  display: inline;
+}
+
+.lab-location {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1ca393;
+  background: #e0fdf3;
+  padding: 2px 12px;
+  border-radius: 11px;
+}
+
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  border-radius: 13px;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.9s cubic-bezier(.4,.2,.2,1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  font-size: 1.13rem;
+  font-weight: 700;
+  color: #22223b;
+  text-align: center;
+  box-shadow: 0 4px 18px #f1f4fc;
+  border: 2px solid #ffd6e0;
+  font-family: 'Quicksand', 'Inter', sans-serif;
+  background: #fffacf;
+}
+
+.card-front {
+  z-index: 2;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background: #d4fbff;
+}
+
+.info-card:hover .card-front {
+  transform: rotateY(180deg);
+}
+
+.info-card:hover .card-back {
+  transform: rotateY(0deg);
+}
+
+/* Card Colors (Light pastels, for matching blocks/floors) */
+.color1 .card-front, .color1 .card-back { background: linear-gradient(135deg,#fffacf 60%, #ffd6e0 100%);}
+.color2 .card-front, .color2 .card-back { background: linear-gradient(135deg,#d4fbff 60%, #fffacf 100%);}
+.color3 .card-front, .color3 .card-back { background: linear-gradient(135deg,#ffd6e0 60%, #fffacf 100%);}
+.color4 .card-front, .color4 .card-back { background: linear-gradient(135deg,#fffacf 60%, #d4fbff 100%);}
+.color5 .card-front, .color5 .card-back { background: linear-gradient(135deg,#fbecb2 60%, #fae268 100%);}
+.color6 .card-front, .color6 .card-back { background: linear-gradient(135deg,#ffd1fa 60%, #fffafc 100%);}
+.color7 .card-front, .color7 .card-back { background: linear-gradient(135deg,#d2fcce 60%, #fffacf 100%);}
+.color8 .card-front, .color8 .card-back { background: linear-gradient(135deg,#fffacf 60%, #ffd6e0 100%);}
+
+/* Layout Images */
+.layout-image {
+  max-width: 90vw;
+  max-height: 80vh;
+  margin-top: 42px;
+  object-fit: contain;
+  border: 2px solid #fffacf;
+  border-radius: 13px;
+  box-shadow: 0 4px 24px #fffacf;
+}
+
+/* Footer (Light) */
+.footer-about {
+  width: 100vw;
+  background: linear-gradient(90deg, #fffacf 70%, #d4fbff 100%);
+  color: #1a2342;
+  padding: 36px 10px 20px 10px;
+  margin-top: 60px;
+  font-family: 'Quicksand', 'Inter', sans-serif;
+  box-shadow: 0 -2px 16px #fffacf;
+}
+
+.footer-content {
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-about a {
+  color: #ffb703;
+  text-decoration: underline;
+  font-weight: 700;
+  transition: color 0.15s;
+}
+
+.footer-about a:hover,
+.footer-about a:focus {
+  color: #fb8500;
+}
+
+.footer-about h2 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  color: #3e3e71;
+  font-family: 'Fredoka One', cursive;
+}
+
+.footer-about p {
+  margin: 10px 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #181f2b;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  body { font-size: 17px; }
+  .welcome-text svg { max-width: 560px; }
+  .get-started, .block-btn, .floor-button, #back-button { font-size: 1rem; padding: 10px 10px; }
+  .footer-about { padding: 14px 2px;}
+  .card-container { padding: 15px 2px;}
+}
+@media (max-width: 600px) {
+  body { font-size: 14px;}
+  .site-header, .nav-container { padding: 6px; }
+  .site-name { font-size: 1.12rem;}
+  .welcome-text svg { max-width: 120px; }
+  .subtext, .text { font-size: 1.1rem;}
+  .get-started, .block-btn, .floor-button, #back-button { font-size: .89rem; padding: 8px 6px;}
+  .block-buttons { flex-direction: column; gap: 12px;}
+  .footer-about { padding: 6px 2px; margin-top: 18px;}
+  .layout-image { max-width: 100%; margin-top: 10px;}
+  .nav-links { flex-direction: column; gap: 6px;}
+  .card-container { gap: 7px; padding: 6px 2px;}
+  .info-card { min-width: 110px; max-width: 96vw; height: 120px;}
+  .card-front, .card-back { font-size: .85rem; padding: 7px;}
+}
